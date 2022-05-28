@@ -1,3 +1,10 @@
 export default function Contact() {
-    return <h1 className="text-3xl font-bold underline">contact</h1>
+    return (
+        <div>
+            <section className="my-80">section one </section>
+            <section className="my-80">section two </section>
+            <section className="my-80">section three </section>
+            <section className="my-80">section four </section>
+        </div>
+    )
 }

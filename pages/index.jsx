@@ -6,9 +6,11 @@ export default function Home() {
             <Head>
                 <title>Manpower NSL</title>
             </Head>
-            <div className="my-10">
-                <h1 className="">index</h1>
-            </div>
+
+            <section className="my-80">section one </section>
+            <section className="my-80">section two </section>
+            <section className="my-80">section three </section>
+            <section className="my-80">section four </section>
         </>
     )
 }
