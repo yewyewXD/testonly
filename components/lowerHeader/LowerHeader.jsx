@@ -3,15 +3,14 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import PrimaryBtn from '../primaryBtn/PrimaryBtn'
-import styles from './BottomHeader.module.scss'
+import styles from './LowerHeader.module.scss'
 
-export default function BottomHeader() {
+export default function LowerHeader({ onClickHamburger }) {
     const router = useRouter()
 
     return (
-        <div className={clsx(styles.headerLower)}>
-            {/* todo: 移除bg */}
-            <div className={clsx(styles.outerBox, 'bg-gray-600')}>
+        <div className={clsx(styles.headerLower, 'z-50 ')}>
+            <div className={clsx(styles.outerBox)}>
                 <div className={styles.logoBox}>
                     <figure className="logo">
                         <Link href="/">
@@ -21,7 +20,8 @@ export default function BottomHeader() {
                         </Link>
                     </figure>
                 </div>
-                <div className="">
+
+                <div className="hidden lg:block">
                     <ul className="flex gap-2 text-white">
                         <li
                             className={clsx(styles.listItem, {
@@ -76,7 +76,15 @@ export default function BottomHeader() {
                         </li>
                     </ul>
                 </div>
-                <div>
+
+                <div
+                    className="cursor-pointer text-lg text-white lg:hidden"
+                    onClick={onClickHamburger}
+                >
+                    <i className="fa fa-bars"></i>
+                </div>
+
+                <div className="hidden sm:block">
                     <Link href="/contact">
                         <a>
                             <PrimaryBtn hoverBgColor="black">

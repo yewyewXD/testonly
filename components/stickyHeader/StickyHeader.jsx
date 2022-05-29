@@ -29,7 +29,7 @@ export default function StickyHeader() {
 
     return (
         <div
-            className={clsx(styles.header, {
+            className={clsx('hidden lg:block', styles.header, {
                 [`${styles.stickHeaderShown}`]: showStickyHeader,
             })}
         >

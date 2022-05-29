@@ -1,0 +1,214 @@
+// about section
+
+.aboutSection {
+    position: relative;
+    padding: 120px 0px 100px 0px;
+
+    .autoContainer {
+        position: static;
+        max-width: 1200px;
+        padding: 0px 15px;
+        margin: 0 auto;
+    }
+
+    .imageBlock {
+        .imageBox {
+            position: relative;
+            display: block;
+            padding-right: 40px;
+            margin-right: 20px;
+            padding-bottom: 120px;
+
+            &:hover .imageOne:after {
+                -webkit-animation: shine 1s;
+                animation: shine 1s;
+            }
+
+            .imageOne {
+                position: relative;
+                overflow: hidden;
+                padding-bottom: 30px;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 10px;
+                    left: 0px;
+                    bottom: 0px;
+                    background: #28aa4a;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 0;
+                    left: -80%;
+                    display: block;
+                    content: '';
+                    width: 50%;
+                    height: 100%;
+                    background: -o-linear-gradient(
+                        left,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0.3) 100%
+                    );
+                    background: -webkit-gradient(
+                        linear,
+                        left top,
+                        right top,
+                        from(rgba(255, 255, 255, 0)),
+                        to(rgba(255, 255, 255, 0.3))
+                    );
+                    background: linear-gradient(
+                        to right,
+                        rgba(255, 255, 255, 0) 0%,
+                        rgba(255, 255, 255, 0.3) 100%
+                    );
+                    -webkit-transform: skewX(-25deg);
+                    -ms-transform: skewX(-25deg);
+                    transform: skewX(-25deg);
+                }
+            }
+
+            .imageTwo {
+                position: absolute;
+                right: 0px;
+                bottom: 0px;
+                background: #fff;
+                padding: 20px;
+            }
+        }
+    }
+
+    @-webkit-keyframes shine {
+        100% {
+            left: 125%;
+        }
+    }
+
+    @keyframes shine {
+        100% {
+            left: 125%;
+        }
+    }
+
+    .sectionTitle {
+        margin-bottom: 36px;
+        position: relative;
+        display: block;
+
+        .sectionTitleHint {
+            position: relative;
+            display: block;
+            font-size: 16px;
+            line-height: 26px;
+            font-weight: 500;
+            margin-bottom: 7px;
+            color: #28aa4a;
+        }
+
+        .title {
+            position: relative;
+            display: block;
+            font-size: 50px;
+            line-height: 65px;
+            font-weight: 700;
+            margin: 0px;
+        }
+    }
+
+    .text {
+        font-size: 20px;
+        line-height: 36px;
+        margin-bottom: 45px;
+    }
+
+    .innerBox {
+        position: relative;
+        padding-bottom: 50px;
+        margin-bottom: 80px;
+        border-bottom: 1px solid #e6e6e6;
+
+        .singleItem {
+            .itemTitle {
+                position: relative;
+                display: block;
+                font-size: 18px;
+                line-height: 26px;
+                font-weight: 500;
+                padding-left: 60px;
+                margin-bottom: 13px;
+
+                .titleIndex {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    font-weight: 700;
+                    color: #28aa4a;
+                }
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    width: 23px;
+                    height: 2px;
+                    left: 27px;
+                    top: 12px;
+                    background: #28aa4a;
+                }
+            }
+        }
+    }
+
+    .authorBox {
+        .authorThumb {
+            left: 0px;
+            top: 0px;
+            width: 87px;
+            height: 87px;
+            background: #fff;
+            padding: 7px;
+            border-radius: 50%;
+            border: 2px solid #28aa4a;
+
+            .authorImage {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .designation {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    .experienceBox {
+        background: #fff;
+        padding: 10px 10px;
+        border: 2px solid #28aa4a;
+        max-width: 230px;
+        width: 100%;
+
+        .inner {
+            padding: 29px 30px 25px 25px;
+            display: flex;
+            background: #f6f6f6;
+        }
+
+        .years {
+            font-size: 50px;
+            line-height: 50px;
+            margin-right: 15px;
+        }
+
+        .yearText {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            position: relative;
+            top: 3px;
+        }
+    }
+}

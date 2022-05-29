@@ -5,7 +5,12 @@ import styles from './TopHeader.module.scss'
 
 export default function TopHeader() {
     return (
-        <div className={clsx(styles.headerTop, 'flex')}>
+        <div
+            className={clsx(
+                styles.headerTop,
+                'z-50 flex flex-col items-center lg:flex-row'
+            )}
+        >
             <ul className={styles.infoList}>
                 <li className={styles.listItem}>
                     <i className={clsx(styles.icon, 'flaticon-email')}></i>
@@ -28,7 +33,7 @@ export default function TopHeader() {
                 </li>
             </ul>
 
-            <div className="ml-auto flex">
+            <div className="flex lg:ml-auto">
                 <ul className={styles.socialLinks}>
                     <li className={styles.listItem}>
                         <a className={styles.anchor} href="/">
