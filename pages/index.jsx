@@ -3,6 +3,9 @@ import Head from 'next/head'
 import BannerCarousel from '../components/bannerCarousel/BannerCarousel'
 import styles from '../styles/Home.module.scss'
 import clsx from 'clsx'
+import Link from 'next/link'
+import PrimaryBtn from '../components/primaryBtn/PrimaryBtn'
+
 export default function Home() {
     return (
         <>
@@ -14,14 +17,15 @@ export default function Home() {
                 <BannerCarousel />
             </section>
 
-            <SectionTwo />
-            <section className="my-80">section three </section>
-            <section className="my-80">section four </section>
+            <SectionAbout />
+            <SectionService />
+            <SectionWorkingProcess />
+            <CtaSection />
         </>
     )
 }
 
-function SectionTwo() {
+function SectionAbout() {
     return (
         <section className={styles.aboutSection}>
             <div className={styles.autoContainer}>
@@ -49,7 +53,7 @@ function SectionTwo() {
                     <div className="basis-1/2">
                         <div className={styles.contentBox}>
                             <div className={styles.sectionTitle}>
-                                <p className={styles.sectionTitleHint}>
+                                <p className={styles.titleHint}>
                                     Welcome to Agency
                                 </p>
                                 <h2 className={styles.title}>
@@ -126,6 +130,214 @@ function SectionTwo() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function SectionService() {
+    return (
+        <section className={styles.serviceSection}>
+            <div className={styles.autoContainer}>
+                <div className={styles.titleWrapper}>
+                    <p className={styles.titleHint}>Our All Services List</p>
+                    <h2 className={styles.title}>Outsourced HR Services</h2>
+                </div>
+                <div className="flex flex-col items-center justify-center gap-7 lg:flex-row">
+                    <div className={clsx('basis-1/3', styles.card)}>
+                        <figure className={styles.imageBox}>
+                            <img
+                                className={styles.image}
+                                src="/images/service/service-1.jpg"
+                                alt=""
+                            />
+                            <span className={styles.category}>Management</span>
+                            <i
+                                className={clsx(
+                                    'flaticon-consulting',
+                                    styles.cateogryIcon
+                                )}
+                            ></i>
+                        </figure>
+                        <div className={styles.lowerContent}>
+                            <h3 className={styles.h3}>
+                                <Link href="/hr-consulting">
+                                    <a>HR Consulting</a>
+                                </Link>
+                            </h3>
+                            <p className={styles.cardText}>
+                                Lorem ipsum dolor sit amet, consectetur notted
+                                adipisicing elit sed do eiusmod.
+                            </p>
+                            <div>
+                                <Link href="/hr-consulting">
+                                    <a className={styles.link}>Read More</a>
+                                </Link>
+                            </div>
+                            <div className={styles.lightIcon}>
+                                <i className="flaticon-consulting"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={clsx('basis-1/3', styles.card)}>
+                        <figure className={styles.imageBox}>
+                            <img
+                                className={styles.image}
+                                src="/images/service/service-2.jpg"
+                                alt=""
+                            />
+                            <span className={styles.category}>Resources</span>
+                            <i
+                                className={clsx(
+                                    'flaticon-controller',
+                                    styles.cateogryIcon
+                                )}
+                            ></i>
+                        </figure>
+                        <div className={styles.lowerContent}>
+                            <h3 className={styles.h3}>
+                                <Link href="/technology-resource">
+                                    <a>Technology Resource</a>
+                                </Link>
+                            </h3>
+                            <p className={styles.cardText}>
+                                Lorem ipsum dolor sit amet, consectetur notted
+                                adipisicing elit sed do eiusmod.
+                            </p>
+                            <div>
+                                <Link href="/technology-resource">
+                                    <a className={styles.link}>Read More</a>
+                                </Link>
+                            </div>
+                            <div className={styles.lightIcon}>
+                                <i className="flaticon-controller"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={clsx('basis-1/3', styles.card)}>
+                        <figure className={styles.imageBox}>
+                            <img
+                                className={styles.image}
+                                src="/images/service/service-3.jpg"
+                                alt=""
+                            />
+                            <span className={styles.category}>Solutions</span>
+                            <i
+                                className={clsx(
+                                    'flaticon-policy',
+                                    styles.cateogryIcon
+                                )}
+                            ></i>
+                        </figure>
+                        <div className={styles.lowerContent}>
+                            <h3 className={styles.h3}>
+                                <Link href="/staffing-solutions">
+                                    <a>Staffing Solutions</a>
+                                </Link>
+                            </h3>
+                            <p className={styles.cardText}>
+                                Lorem ipsum dolor sit amet, consectetur notted
+                                adipisicing elit sed do eiusmod.
+                            </p>
+                            <div>
+                                <Link href="/staffing-solutions">
+                                    <a className={styles.link}>Read More</a>
+                                </Link>
+                            </div>
+                            <div className={styles.lightIcon}>
+                                <i className="flaticon-policy"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function SectionWorkingProcess() {
+    return (
+        <section className={styles.workingProcessSection}>
+            <div className={styles.autoContainer}>
+                <div className={styles.titleWrapper}>
+                    <p className={styles.titleHint}>
+                        Staffing Recent Closed Projects
+                    </p>
+                    <h2 className={styles.title}>We Choose a Recvite</h2>
+                </div>
+                <div className="flex flex-col items-center justify-center gap-7 lg:flex-row">
+                    <div className={clsx('basis-1/3', styles.card)}>
+                        <div className={styles.iconBox}>
+                            <i className="flaticon-investment"></i>
+                            <span className={styles.index}>01</span>
+                            <div className={styles.iconOutline}></div>
+                        </div>
+                        <h3 className={styles.cardTitle}>Consult with Team</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur notted
+                            adipisicing elit sed do eiusmod.
+                        </p>
+                    </div>
+
+                    <div className={clsx('basis-1/3', styles.card)}>
+                        <div className={styles.iconBox}>
+                            <i className="flaticon-checklist"></i>
+                            <span className={styles.index}>02</span>
+                            <div className={styles.iconOutline}></div>
+                        </div>
+                        <h3 className={styles.cardTitle}>Make a Schedule</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur notted
+                            adipisicing elit sed do eiusmod.
+                        </p>
+                    </div>
+
+                    <div className={clsx('basis-1/3', styles.card)}>
+                        <div className={styles.iconBox}>
+                            <i className="flaticon-outsourcing"></i>
+                            <span className={styles.index}>03</span>
+                            <div className={styles.iconOutline}></div>
+                        </div>
+                        <h3 className={styles.cardTitle}>Hire & Enjoy</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur notted
+                            adipisicing elit sed do eiusmod.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+function CtaSection() {
+    return (
+        <section className={styles.ctaSection}>
+            <div className={styles.autoContainer}>
+                <div className="flex flex-col justify-between lg:flex-row lg:items-center">
+                    <div className="align-left">
+                        <h2 className={styles.title}>
+                            Hire Your Next Candidate On Recvite
+                        </h2>
+                    </div>
+                    <div>
+                        <Link href="/">
+                            <a>
+                                <PrimaryBtn
+                                    hoverBgColor="white"
+                                    bgColor="black"
+                                    style={{
+                                        padding: '22px 60px',
+                                        fontSize: ' 14px',
+                                    }}
+                                >
+                                    Discover More
+                                </PrimaryBtn>
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>

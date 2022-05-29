@@ -36,6 +36,10 @@
 }
 
 .btnBlack {
+    background: #272727 !important;
+}
+
+.btnBgBlack {
     color: #fff;
 
     &:before {
@@ -43,7 +47,7 @@
     }
 }
 
-.btnWhite {
+.btnBgWhite {
     color: #fff;
 
     &:before {

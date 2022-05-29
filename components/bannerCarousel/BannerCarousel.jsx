@@ -62,6 +62,8 @@ export default function BannerCarousel() {
             showArrows={false}
             showIndicators={true}
             showStatus={false}
+            showThumbs={false}
+            infiniteLoop={true}
         >
             <CarouselItem />
             <CarouselItem />
