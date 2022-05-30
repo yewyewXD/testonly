@@ -1,60 +1,60 @@
 .btn {
-    position: relative;
-    display: inline-block;
-    font-size: 12px;
-    line-height: 26px;
-    font-weight: 700;
-    text-align: center;
-    padding: 14.5px 31px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    z-index: 1;
-    background: #28aa4a;
-    color: #fff;
+  position: relative;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  padding: 14.5px 31px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  z-index: 1;
+  background: #28aa4a;
+  color: #fff;
 
-    text-decoration: none;
+  text-decoration: none;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+
+  &:hover:before {
+    width: 100%;
+  }
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
     transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -webkit-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-
-    &:hover:before {
-        width: 100%;
-    }
-
-    &:before {
-        position: absolute;
-        content: '';
-        width: 0%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        z-index: -1;
-        transition: all 500ms ease;
-    }
+  }
 }
 
 .btnBlack {
-    background: #272727 !important;
+  background: #272727 !important;
 }
 
 .btnBgBlack {
-    color: #fff;
+  color: #fff;
 
-    &:before {
-        background: #272727;
-    }
+  &:before {
+    background: #272727;
+  }
 }
 
 .btnBgWhite {
-    color: #fff;
+  color: #fff;
 
-    &:before {
-        background: #fff;
-    }
+  &:before {
+    background: #fff;
+  }
 
-    &:hover {
-        color: #28aa4a;
-    }
+  &:hover {
+    color: #28aa4a;
+  }
 }
