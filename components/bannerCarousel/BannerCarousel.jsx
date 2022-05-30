@@ -1,35 +1,29 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "./BannerCarousel.module.scss";
 import clsx from "clsx";
 import PrimaryBtn from "../primaryBtn/PrimaryBtn";
-import { Carousel } from "react-responsive-carousel";
 
 function CarouselItem() {
-  const [isActive, setIsActive] = useState(false);
-  useEffect(() => {
-    setIsActive(true);
-  }, []);
-
   return (
     <div className={styles.slideItem}>
       <div
         className={clsx(styles.backgroundImage, {
-          [`${styles.backgroundImageActive}`]: isActive,
+          [`${styles.backgroundImageActive}`]: true,
         })}
       ></div>
       <div className={styles.autoContainer}>
         <div className={styles.contentBox}>
           <h1
             className={clsx(styles.heading, {
-              [`${styles.headingActive}`]: isActive,
+              [`${styles.headingActive}`]: true,
             })}
           >
             The Right Candidate for your Business
           </h1>
           <p
             className={clsx(styles.paragraph, {
-              [`${styles.paragraphActive}`]: isActive,
+              [`${styles.paragraphActive}`]: true,
             })}
           >
             There are many of passages of lorem Ipsum, but the majori have
@@ -37,7 +31,7 @@ function CarouselItem() {
           </p>
           <div
             className={clsx("flex", styles.btn, {
-              [`${styles.btnActive}`]: isActive,
+              [`${styles.btnActive}`]: true,
             })}
           >
             <a href="/">
@@ -53,18 +47,5 @@ function CarouselItem() {
 }
 
 export default function BannerCarousel() {
-  return (
-    <Carousel
-      emulateTouch
-      showArrows={false}
-      showIndicators={true}
-      showStatus={false}
-      showThumbs={false}
-      infiniteLoop={true}
-    >
-      <CarouselItem />
-      <CarouselItem />
-      <CarouselItem />
-    </Carousel>
-  );
+  return <CarouselItem />;
 }
